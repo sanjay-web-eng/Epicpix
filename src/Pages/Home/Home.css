@@ -1,8 +1,7 @@
 .maina {
 	padding: 10px;
-	column-count:8;
+	column-count: 8;
 	column-gap: 10px;
-	 
 }
 
 .card {
@@ -17,7 +16,19 @@
 	border-radius: 13px;
 	object-fit: cover;
 }
-
+.searchArea {
+	width: 100%;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: sticky;
+	top: 61px;
+	height: 35px;
+	background-color: transparent;
+	backdrop-filter: blur(25px) saturate(76%);
+	-webkit-backdrop-filter: blur(25px) saturate(76%);
+}
 @media (max-width: 1200px) {
 	.maina {
 		column-count: 3;
@@ -27,6 +38,9 @@
 	.maina {
 		column-count: 2;
 		padding: 10px;
+	}
+	.searchArea {
+		top: 57px;
 	}
 }
 @media (max-width: 480px) {
