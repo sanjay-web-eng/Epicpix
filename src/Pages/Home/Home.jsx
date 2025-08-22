@@ -22,7 +22,22 @@ function Home() {
 	console.log(items);
 	return (
 		<>
+		{data.length == 0 && (
+					<div
+						style={{
+							width: "100%",
+							justifyContent: "center",
+							alignItems: "center",
+							display: "flex",
+							height: "5px",
+							position: "absolute",
+						}}
+					>
+						<BarLoader width="90%" />
+					</div>
+				)}
 			<div className="searchArea">
+				
 				<input
 					type="text"
 					value={userInput}
@@ -42,20 +57,7 @@ function Home() {
 			</div>
 
 			<div className="maina">
-				{data.length == 0 && (
-					<div
-						style={{
-							width: "100%",
-							justifyContent: "center",
-							alignItems: "center",
-							display: "flex",
-							height: "5px",
-							position: "absolute",
-						}}
-					>
-						<BarLoader width="90%" />
-					</div>
-				)}
+				 
 
 				{userInput ? (
 					items.length == 0 ? (
